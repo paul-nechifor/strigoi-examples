@@ -24,12 +24,12 @@ sh = (script, cb) ->
 
 build = (name, cb) ->
   full = parent + '/' + name
-  configure =
+  configure = JSON.stringify
     genDir: '../../gen/' + name
     tmpDir: '../../tmp/' + name
 
   sh """
-    strigoi -d '#{full}' --configure '#{JSON.stringify configure}'
+    node_modules/.bin/strigoi -d '#{full}' --configure '#{configure}'
   """, cb
 
 main()
