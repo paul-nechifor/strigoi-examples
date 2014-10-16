@@ -5,15 +5,24 @@ fs = require 'fs'
 parent = __dirname + '/examples'
 
 main = ->
-  sh """
-    mkdir -p gen tmp 2>/dev/null
-  """, (err) ->
+  async.series [init, processAll], (err) ->
     throw err if err
-    fs.readdir parent, (err, dirs) ->
-      throw err if err
-      dirs = dirs.sort()
-      async.mapSeries dirs, build, (err) ->
-        throw err if err
+
+init = (cb) ->
+  sh 'mkdir -p gen tmp 2>/dev/null', cb
+
+processAll = (cb) ->
+  fs.readdir parent, (err, dirs) ->
+    return cb err if err
+    if process.argv.length > 2
+      name = process.argv[2]
+      dir = dirs
+      .filter (d) -> d.indexOf(name) is 0
+      .sort((a, b) -> a.length - b.length)[0]
+      return build dir, cb
+    dirs = dirs.sort()
+    async.mapSeries dirs, build, (err) ->
+      return cb err if err
 
 sh = (script, cb) ->
   exec script, (err, stdout, stderr) ->
