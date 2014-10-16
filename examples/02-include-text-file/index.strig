@@ -1,0 +1,8 @@
+---
+type: jade
+async:
+  f:
+  - readFile
+  - file
+---
+p= strigoi.async.f.trim()
