@@ -1,0 +1,7 @@
+---
+type: jade
+---
+html
+  head
+  body
+    p Test.
