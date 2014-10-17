@@ -1,0 +1,9 @@
+---
+type: jade
+async:
+  file:
+  - renderJadeFile
+  - main.jade
+  - name: Paul
+---
+!= strigoi.async.file
