@@ -1,0 +1,13 @@
+---
+type: jade
+configure:
+  bowerPackages:
+  - paul-nechifor/strigoi-reveal-js
+  useModules:
+  - path: '@bower/strigoi-reveal-js'
+async:
+  content:
+  - renderJadeFile
+  - modules/strigoi-reveal-js/views/index.jade
+---
+!= strigoi.async.content
