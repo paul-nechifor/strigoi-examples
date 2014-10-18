@@ -1,0 +1,16 @@
+---
+type: jade
+async:
+  stylus:
+  - renderStylusFile
+  - a/a.styl
+  - includeCss: true
+  css2:
+  - bundleStylus
+  - a/a.styl
+  - css/css2.css
+  - includeCss: false
+---
+html
+  head
+    style!= strigoi.async.stylus
