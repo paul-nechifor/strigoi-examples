@@ -1,13 +1,30 @@
 ---
 type: jade
+main: true
 configure:
   bowerPackages:
   - paul-nechifor/strigoi-reveal-js
   useModules:
   - path: '@bower/strigoi-reveal-js'
+    title: Presentation Title
+    cssTheme: beige
+    revealInit: {}
 async:
-  content:
+  slides:
   - renderJadeFile
-  - modules/strigoi-reveal-js/views/index.jade
+  - by-id/index/slides.jade
 ---
-!= strigoi.async.content
+!= strigoi.async.slides
+
+---
+type: jade
+id: slides
+---
+extends ../../modules/strigoi-reveal-js/views/index.jade
+block slides
+  section
+    h1 Presentation Title
+    p Text here.
+  section
+    h2 Second
+    p End.
