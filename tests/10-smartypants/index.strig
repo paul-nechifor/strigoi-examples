@@ -1,0 +1,13 @@
+---
+type: md
+markedOpts:
+  smartypants: false
+---
+Hi "world"!
+
+---
+type: md
+markedOpts:
+  smartypants: true
+---
+Hi "world"!
