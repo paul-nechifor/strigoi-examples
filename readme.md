@@ -26,6 +26,8 @@ Generate  in `gen/` and diff with `correct/`:
 
     ./run 09 --verify
 
+Use `--install` with projects that require installation first.
+
 ## License
 
 MIT

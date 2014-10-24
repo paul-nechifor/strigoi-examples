@@ -40,9 +40,9 @@ build = (name, cb) ->
       else
         '../../gen/' + name
     tmpDir: '../../tmp/' + name
-
+  i = if argv.install or argv.i then '--install' else ''
   sh """
-    node_modules/.bin/strigoi -d '#{full}' --configure '#{configure}'
+    node_modules/.bin/strigoi #{i} -d '#{full}' --configure '#{configure}'
   """, (err) ->
     return cb err if err
     verify name, cb
