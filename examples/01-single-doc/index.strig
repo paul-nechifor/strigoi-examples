@@ -2,17 +2,11 @@
 type: md
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc fringilla
-hendrerit nulla ut malesuada. Nunc quis pulvinar ante. Interdum et malesuada
-fames ac ante ipsum primis in faucibus. Sed finibus posuere justo in suscipit.
+P1
 
-Donec in sagittis augue. Aliquam dignissim, sapien sit amet sollicitudin
-hendrerit, urna magna tempor lorem, at fringilla ligula purus a neque.
+P2
 
-Sed id sem pharetra, vulputate velit at, condimentum nunc. Integer vel
-consectetur neque, ac condimentum justo. Pellentesque a suscipit odio.
-Suspendisse luctus purus eu sem convallis iaculis. Sed placerat nibh in placerat
-posuere. Praesent blandit posuere dui, eget interdum nisi facilisis eu.
+P3
 
 ---
 type: jade
