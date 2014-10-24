@@ -1,0 +1,10 @@
+li {
+  display: none;
+}
+span {
+  display: block;
+}
+@import '../c/a.css';
+div {
+  width: 100px;
+}
