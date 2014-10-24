@@ -1,6 +1,6 @@
-# Strigoi Examples
+# Strigoi Tests
 
-List of examples for the [Strigoi][sg] static site generator.
+List of tests for the [Strigoi][sg] static site generator.
 
 ## Installation
 

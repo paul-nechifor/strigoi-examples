@@ -2,7 +2,7 @@ async = require 'async'
 fs = require 'fs'
 {exec, spawn} = require 'child_process'
 
-parent = __dirname + '/examples'
+parent = __dirname + '/tests'
 argv = require('minimist') process.argv.slice(2), string: '_'
 
 main = ->
