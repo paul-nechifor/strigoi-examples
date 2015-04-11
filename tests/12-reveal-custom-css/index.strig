@@ -1,0 +1,39 @@
+---
+type: jade
+id: main
+main: true
+async:
+  stylus:
+  - renderStylusFile
+  - "@ids/index/theme.styl"
+  - includeCss: true
+configure:
+  bowerPackages:
+  - paul-nechifor/strigoi-reveal-js
+  useModules:
+  - path: '@bower/strigoi-reveal-js'
+    title: Another Presentation
+    cssTheme: default
+    revealInit: {}
+---
+extends ../../modules/strigoi-reveal-js/views/index.jade
+block slides
+  section
+    h1= presentationTitle
+    p Text here.
+    code!= strigoi.async.stylus
+  section: :markdown
+    ## Second page
+
+    * something
+    * other
+    * here
+  section: :markdown
+    # The End
+---
+type: stylus
+id: theme
+---
+@import '../../modules/strigoi-reveal-js/styles/settings'
+width-body = 50px
+@import '../../modules/strigoi-reveal-js/styles/theme'
