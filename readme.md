@@ -1,3 +1,7 @@
+# This repository has been moved to [gitlab.com/paul-nechifor/strigoi-tests](http://gitlab.com/paul-nechifor/strigoi-tests).
+
+Old readme:
+
 # Strigoi Tests
 
 List of tests for the [Strigoi][sg] static site generator.

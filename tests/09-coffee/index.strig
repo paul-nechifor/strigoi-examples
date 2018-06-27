@@ -1,8 +1,0 @@
----
-type: coffee
-render:
-- sayHello
-- name: Paul
----
-exports.sayHello = (opts, cb) ->
-  cb null, "Hello #{opts.name}."
